@@ -53,7 +53,7 @@ authRouter.post("/api/signin",  async (req, res)=>{
             .json({msg:"Incorect password"});
         }
 
-       const token = jwt.sign({id: user._id,}, "passwordKey");
+       const token = jwt.sign({id: user._id,}, process.env.ACCESS_TOKEN_SECRET);
        res.json({token, ...user._doc});
 
 
@@ -68,7 +68,7 @@ authRouter.post("/api/tokenIsVaild", async (req, res)=>{
     try {
         const token = req.header('x-auth-token');
         if(!token) return res.json(false);
-        const verified = jwt.verify(token, "passwordKey");
+        const verified = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
         if(!verified) return res.json(false);
 
         const user = await User.findById(verified.id);
