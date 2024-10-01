@@ -1,0 +1,1 @@
+export const DB = "mongodb+srv://kishanv8130:uO5sTgubUba5loVS@cluster0.rd5yw.mongodb.net/FlutterAmazon?retryWrites=true&w=majority&appName=Cluster0"
