@@ -5,6 +5,7 @@ import productRouter from "./routes/product.js";
 import userRouter from "./routes/user.js";
 import dotenv from "dotenv";
 import connectDB from "./db/db.js";
+import cors from "cors"
 
 dotenv.config({
   path:"./.env"
@@ -15,6 +16,7 @@ const app = express();
 
 
 //middleware
+app.use(cors())
 app.use(express.json());
 app.use(authRouter);
 app.use(adminRouter);
