@@ -47,6 +47,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   pay: ^2.0.0
   fl_chart: ^0.69.0
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +76,7 @@ flutter:
     - assets/images/
     - assets/applepay.json
     - assets/gpay.json
+    - .env
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

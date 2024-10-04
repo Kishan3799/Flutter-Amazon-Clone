@@ -12,11 +12,11 @@ class TopCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-            height: 60,
+            height: 90,
       child: ListView.builder(
         itemCount: GlobalVariables.categoryImages.length,
         scrollDirection: Axis.horizontal,
-        itemExtent: 80,
+        itemExtent: 88,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () => naviagteToCategoryPage(context, GlobalVariables.categoryImages[index]['title']!),

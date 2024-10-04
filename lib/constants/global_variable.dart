@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-String uri = "http://192.168.31.156:3000";
+String serverUrl = dotenv.env['SEREVER_URI']!;
+String uri = serverUrl;
 class GlobalVariables {
   // COLORS
   static const appBarGradient = LinearGradient(

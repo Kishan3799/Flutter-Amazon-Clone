@@ -9,14 +9,16 @@ import 'package:amazon_clone/providers/user_provider.dart';
 import 'package:amazon_clone/router.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async{
   // runApp(
   //   DevicePreview(
   //     builder: (context)=> const MyApp()
   //   )
   // );
+    await dotenv.load(fileName: ".env");
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context)=>UserProvider())
   ],child: const MyApp()));
