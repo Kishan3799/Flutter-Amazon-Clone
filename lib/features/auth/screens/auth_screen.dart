@@ -117,7 +117,8 @@ class _AuthScreenState extends State<AuthScreen> {
                         if(_signUpFormKey.currentState!.validate()){
                           signUpNewUser();
                         }
-                      })
+                      },
+                      foregroundColor: Colors.white,)
                     ])),
               ),
             ListTile(
@@ -165,7 +166,8 @@ class _AuthScreenState extends State<AuthScreen> {
                         if(_signInFormKey.currentState!.validate()){
                           signInExistUser();
                         }
-                       })
+                       },
+                       foregroundColor: Colors.white,)
                     ])),
               ),
           ],
